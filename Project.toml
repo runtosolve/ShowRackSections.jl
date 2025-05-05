@@ -1,0 +1,14 @@
+name = "ShowRackSections"
+uuid = "bddbb59e-7bba-497f-a98b-1a7c1d7cd026"
+authors = ["Cris Moen <cris.moen@runtosolve.com>"]
+version = "0.1.0"
+
+[deps]
+CUFSM = "82b4978f-06ae-48e0-88e8-a26b4f7a0fa1"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+CrossSectionFigures = "e7e052ef-3320-4335-9123-44b78e894dd3"
+LinesCurvesNodes = "74a74c3a-221d-4cd1-a4eb-c3c8149e7592"
+ShowCUFSM = "6694c6e5-0e65-41ca-a2e3-80270abd1bf3"
+
+[compat]
+CairoMakie = "0.13.2"
