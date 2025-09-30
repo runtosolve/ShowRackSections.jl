@@ -11,4 +11,8 @@ LinesCurvesNodes = "74a74c3a-221d-4cd1-a4eb-c3c8149e7592"
 ShowCUFSM = "6694c6e5-0e65-41ca-a2e3-80270abd1bf3"
 
 [compat]
+CUFSM = "0.1.0"
 CairoMakie = "0.13.2"
+CrossSectionFigures = "0.1.0"
+LinesCurvesNodes = "0.1.0"
+ShowCUFSM = "0.1.0"
