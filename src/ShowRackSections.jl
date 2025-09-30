@@ -380,6 +380,12 @@ function cee_with_lips_column(section, api_figure_options)
     t_elements = section.tg
     all_figures = mode_shape(model, t, t_elements, all_figures, api_figure_options)
 
+    #distortional buckling, Myy_pos
+    model = section.distortional_buckling_Myy_pos
+    all_figures = signature_curve(model, all_figures, api_figure_options)
+
+    t_elements = section.td
+    all_figures = mode_shape(model, t, t_elements, all_figures, api_figure_options)
 
 
 
@@ -393,7 +399,7 @@ function cee_with_lips_column(section, api_figure_options)
     end
    
 
-    figure_labels = ["gross_section", "net section", "local_buckling_P_signature_curve", "local_buckling_P_mode_shape", "distortional_buckling_P_signature_curve", "distortional_buckling_P_mode_shape", "local_buckling_Mxx_signature_curve", "local_buckling_Mxx_mode_shape", "distortional_buckling_Mxx_signature_curve", "distortional_buckling_Mxx_mode_shape", "local buckling Myy_pos_signature_curve", "local_buckling_Myy_pos_mode_shape", "local_buckling_Myy_neg_signature_curve", "local_buckling_Myy_neg_mode_shape"]
+    figure_labels = ["gross_section", "net section", "local_buckling_P_signature_curve", "local_buckling_P_mode_shape", "distortional_buckling_P_signature_curve", "distortional_buckling_P_mode_shape", "local_buckling_Mxx_signature_curve", "local_buckling_Mxx_mode_shape", "distortional_buckling_Mxx_signature_curve", "distortional_buckling_Mxx_mode_shape", "local buckling Myy_pos_signature_curve", "local_buckling_Myy_pos_mode_shape", "local_buckling_Myy_neg_signature_curve", "local_buckling_Myy_neg_mode_shape", "distortional_buckling_Myy_pos_signature_curve", "distortional_buckling_Myy_pos_mode_shape"]
 
     return all_figures_IO, all_figures, figure_labels
 
@@ -597,6 +603,13 @@ function unistrut_in_column(section, api_figure_options)
     t_elements = section.tg
     all_figures = mode_shape(model, t, t_elements, all_figures, api_figure_options)
 
+     #distortional buckling, Myy_pos
+    model = section.distortional_buckling_Myy_pos
+    all_figures = signature_curve(model, all_figures, api_figure_options)
+
+    t_elements = section.td
+    all_figures = mode_shape(model, t, t_elements, all_figures, api_figure_options)
+
 
 
 
@@ -610,7 +623,7 @@ function unistrut_in_column(section, api_figure_options)
     end
    
 
-    figure_labels = ["gross_section", "net section", "local_buckling_P_signature_curve", "local_buckling_P_mode_shape", "distortional_buckling_P_signature_curve", "distortional_buckling_P_mode_shape", "local_buckling_Mxx_signature_curve", "local_buckling_Mxx_mode_shape", "distortional_buckling_Mxx_signature_curve", "distortional_buckling_Mxx_mode_shape", "local buckling Myy_pos_signature_curve", "local_buckling_Myy_pos_mode_shape", "local_buckling_Myy_neg_signature_curve", "local_buckling_Myy_neg_mode_shape"]
+    figure_labels = ["gross_section", "net section", "local_buckling_P_signature_curve", "local_buckling_P_mode_shape", "distortional_buckling_P_signature_curve", "distortional_buckling_P_mode_shape", "local_buckling_Mxx_signature_curve", "local_buckling_Mxx_mode_shape", "distortional_buckling_Mxx_signature_curve", "distortional_buckling_Mxx_mode_shape", "local buckling Myy_pos_signature_curve", "local_buckling_Myy_pos_mode_shape", "local_buckling_Myy_neg_signature_curve", "local_buckling_Myy_neg_mode_shape", "distortional_buckling_Myy_pos_signature_curve", "distortional_buckling_Myy_pos_mode_shape"]
 
     return all_figures_IO, all_figures, figure_labels
 
@@ -703,6 +716,14 @@ function unistrut_out_column(section, api_figure_options)
 
     t_elements = section.tg
     all_figures = mode_shape(model, t, t_elements, all_figures, api_figure_options)
+
+
+    #distortional buckling, Mxx 
+    # model = section.distortional_buckling_P
+    # all_figures = signature_curve(model, all_figures, api_figure_options)
+
+    # t_elements = section.td
+    # all_figures = mode_shape(model, t, t_elements, all_figures, api_figure_options)
 
 
 
